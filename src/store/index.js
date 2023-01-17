@@ -5,11 +5,6 @@ const store = {
     state: {
       todos: [
         {
-          _id: '1',
-          title: 'EduCo Global',
-          description: 'Activities for Today'
-        },
-        {
           _id: '2',
           title: 'Tundua Edu Consult',
           description: 'Activities for Today'
@@ -23,18 +18,12 @@ const store = {
           _id: '4',
           title: 'Web Development',
           description: 'Activities for Today'
-        },
-        {
-          _id: '5',
-          title: 'Family',
-          description: 'Activities for Today'
-        },
-        {
-          _id: '6',
-          title: 'Naocett Academics Services',
-          description: 'Activities for Today'
         }
       ]
+    },
+
+    createTodo(todo){ 
+      this.state.todos.push(todo) 
     },
 
     actions: {
