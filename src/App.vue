@@ -27,6 +27,11 @@ export default {
       todos: store.state.todos
     }
   },
+
+  created() {
+    this.todos = store.dispatch('initStore')
+  },
+
   methods: {
     createTodo(todo){ 
       store.dispatch('createTodo', todo)
@@ -117,6 +122,7 @@ export default {
     flex-direction: column;
     width: 400px; 
     height: auto; 
+    min-height: 200px;
     background-color: #ededed;
     border-radius: 10px;
   }
